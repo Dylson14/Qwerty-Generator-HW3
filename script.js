@@ -16,15 +16,22 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
  */
 
+/* Declaring my global scope variables */
+var userChoice = "";
+/* Arrays used to hold in password elements. */
 var capitalArr = ["A", "B", "C", "D", "E"];
 var lowerArr = ["a", "b", "c", "d", "e"];
-var specialArr = ["!","@","#","$","%"];
-var numArr = [1,2,3,4,5];
+var specialArr = ["!", "@", "#", "$", "%"];
+var numArr = [1, 2, 3, 4, 5];
 
+/* function responsible for taking userinput and using it to select criteria for password */
+function selectCriteria() {
 
-function firstPrompt() {
-  /* I am asking the user to select criteria for their password */
-  var userChoice = window.alert(
+}
+
+/* function responsible for the initial alerts and prompts. */
+function initialPrompts() {
+  userChoice = window.alert(
     "Before generating your password, you must select some criteria for your password. Click ok to follow on to the next set of instructions."
   );
   userChoice = window.alert(
@@ -36,37 +43,12 @@ function firstPrompt() {
   /* Prints out what the user has selected in the console for developer to check their choice! Helps to see if code is operational. */
   console.log("The user has selected " + userChoice + " as their criteria.");
 
-
-
-
-   /* Decided to use a switch and case, to avoid the over use of if and else statements. */ 
-  switch (userChoice) {
-    case "CAPITAL":
-      console.log("the CAPITAL switch case is working fine!");
-      break;
-    case "SPECIAL":
-      console.log("the SPECIAL switch case is working fine!");
-      break;
-    case "NUMBER":
-      console.log("the NUMBER switch case is working fine!");
-      break;
-    case "CAPITAL" && "SPECIAL":
-      console.log("Both the CAPITAL and SPECIAL together case works fine.");  /* This is not working correctly will head back to this later. */
-      break;
-    default:
-      console.log("Your input is invalid! Try again!");
-  }
-
-
-
-
-  
   if (!userChoice) {
     return;
   }
 }
 
-document.getElementById("generate").addEventListener("click", firstPrompt);
+document.getElementById("generate").addEventListener("click", initialPrompts);
 
 /* // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -91,4 +73,24 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+ */
+
+/* Things I tried to do before but didn't work:
+  Decided to use a switch and case, to avoid the over use of if and else statements. 
+  switch (userChoice) {
+    case "CAPITAL":
+      console.log("the CAPITAL switch case is working fine!");
+      break;
+    case "SPECIAL":
+      console.log("the SPECIAL switch case is working fine!");
+      break;
+    case "NUMBER":
+      console.log("the NUMBER switch case is working fine!");
+      break;
+    case "CAPITAL" && "SPECIAL":
+      console.log("Both the CAPITAL and SPECIAL together case works fine.");  
+      break;
+    default:
+      console.log("Your input is invalid! Try again!");
+  }
  */

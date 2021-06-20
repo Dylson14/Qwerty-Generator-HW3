@@ -39,7 +39,7 @@ function firstPrompt() {
 
 
 
- /*  Decided to use a switch and case, to avoid the over use of if and else statements. 
+   /* Decided to use a switch and case, to avoid the over use of if and else statements. */ 
   switch (userChoice) {
     case "CAPITAL":
       console.log("the CAPITAL switch case is working fine!");
@@ -51,11 +51,11 @@ function firstPrompt() {
       console.log("the NUMBER switch case is working fine!");
       break;
     case "CAPITAL" && "SPECIAL":
-      console.log("Both the CAPITAL and SPECIAL together case works fine.");  This is not working correctly will head back to this later.
+      console.log("Both the CAPITAL and SPECIAL together case works fine.");  /* This is not working correctly will head back to this later. */
       break;
     default:
       console.log("Your input is invalid! Try again!");
-  }*  */
+  }
 
 
 

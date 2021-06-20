@@ -29,9 +29,7 @@ var numArr = [1, 2, 3, 4, 5];
 
 /* function responsible for taking userinput and using it to select criteria for password */
 function selectCriteria() {
-  console.log(
-    "selectCriteria function has activated, userChoice is: " + userChoice
-  );
+  console.log( "selectCriteria function has activated, userChoice is: " + userChoice);
 
   var findCapital = "CAPITAL";
   var findNumber = "NUMBER";
